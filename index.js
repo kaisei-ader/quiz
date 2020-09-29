@@ -6,4 +6,4 @@ const button = document.getElementsByTagName('button')
 
 document.getElementById('js-text').textContent = question;
 let buttonIndex = 0;
-let buttonLength
+let buttonLengt
