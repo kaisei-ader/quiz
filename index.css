@@ -57,6 +57,7 @@ header{
   border: none;
   color: rgb(82, 81, 81);
   font-weight: 600;
+  font-size:12px;
   background: #e0e6ec;
   box-shadow: 7px 7px 14px #bec4c9, -7px -7px 14px #ffffff;
   cursor: pointer;
