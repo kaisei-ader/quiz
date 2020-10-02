@@ -28,7 +28,7 @@ const setQuiz = () =>{
 }
 setQuiz();
 
-let histories = [];
+
 
 let eventIndex = 0;
 while (eventIndex < buttonLength){
