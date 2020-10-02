@@ -12,7 +12,6 @@ let quiz = [
     anwers: ['スティーブ・ジョブズ','ビル・ゲイツ','マーク・ザッカーバーグ','ジェフ・べゾス'],
     currect: 'マーク・ザッカーバーグ'}
 ]
-
 let   point = 0;
 const quizLenght = quiz.length;
 let   quizIndex = 0;
@@ -29,22 +28,50 @@ const setQuiz = () =>{
 }
 setQuiz();
 
+let histories = [];
+
 let eventIndex = 0;
-while(eventIndex < buttonLength){
+while (eventIndex < buttonLength){
     button[eventIndex].addEventListener('click',(e)=>{
-        if(quiz[quizIndex].currect === e.target.textContent){
+        if (quiz[quizIndex].currect === e.target.textContent){
             window.alert('正解です');
             point++;
-        }else{
+        } else {
             window.alert('不正解です');
         }
         quizIndex++;
-        if(quizIndex < quizLenght){
+        if (quizIndex < quizLenght){
             setQuiz();
-        }else{
+        } else {
             window.alert('あなたの正解数は'+point+'/'+quizLenght+'です')
+            let today = new Date();
+            histories.push({time:today.getFullYear() + ':' + (today.getMonth() + 1 ) + ':' + today.getDate(),
+            point:point})
+            localStorage.setItem("history", JSON.stringify(histories));
+            const historiesEl = document.getElementById("histories");
+            let newElement = document.createElement("p");
+            newElement.setAttribute("class", "history");
+            newElement.innerHTML = `${ histories.slice(-1)[0].time }: ${ histories.slice(-1)[0].point }`
+            historiesEl.appendChild(newElement)
+            quizIndex = 0;
+            point = 0;    
+            setQuiz();     
         }
     })
        eventIndex++;
 }
-localStorage.setItem('history',point )
+histories = JSON.parse(localStorage.getItem("history"))
+if(!histories){
+    localStorage.setItem("history",JSON.stringify([]))
+    histories = []
+}
+const localsetUp = () => {
+    const historiesEl = document.getElementById("histories");
+    histories.forEach((item) => {
+        let newElement = document.createElement("p");
+        newElement.setAttribute("class", "history");
+        newElement.innerHTML = `${ item.time }: ${ item.point }`
+        historiesEl.appendChild(newElement)
+    })
+}
+localsetUp();
