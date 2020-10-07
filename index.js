@@ -1,12 +1,12 @@
 let quiz = [
     {
-    question: 'けんすけのお姉ちゃんの名前はどれ？',
-    anwers: ['りこ','まみこ','れな','ゆうき'],
-    currect: 'ゆうき'},
+    question: 'アップル社が開発・販売しているものはどれ？',
+    anwers: ['iphone','andoroid','windows','google'],
+    currect: 'iphone'},
     {  
-    question: 'かいせいの苗字は？',
-    anwers: ['増田','稲田','久保','岩田'],
-    currect: '稲田'},
+    question: '韓国のIT企業ネイバーの日本法人が運営しているスマホ向けSNSは？',
+    anwers: ['Line','カカオトーク','Twitter','Instagram'],
+    currect: 'Line'},
     {    
     question: 'Facebookの創設者は誰？',
     anwers: ['スティーブ・ジョブズ','ビル・ゲイツ','マーク・ザッカーバーグ','ジェフ・べゾス'],
