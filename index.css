@@ -21,6 +21,7 @@ header{
   border-radius: 0 0 35px 35px;
   width: 98%;
   height: 80px;
+  margin: 0 auto;
   background: #e0e6ec;
   box-shadow: 7px 7px 14px #bec4c9, -7px -7px 14px #ffffff;
   display: flex;
