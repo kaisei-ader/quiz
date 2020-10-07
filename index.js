@@ -29,7 +29,6 @@ const setQuiz = () =>{
 setQuiz();
 
 
-
 let eventIndex = 0;
 while (eventIndex < buttonLength){
     button[eventIndex].addEventListener('click',(e)=>{

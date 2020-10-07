@@ -4,17 +4,19 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
+
 body{
   width: 100%;
   height: 100vh;
   background: #e0e6ec;
 }
+
 header{
   width: 100%;
   height: 80px;
 }
+
 .header-wrap{
   border-radius: 0 0 35px 35px;
   width: 98%;
@@ -25,15 +27,18 @@ header{
   justify-content: center;
   align-items: center;
 }
+
 .header-wrap h1{
   font-size: 30px;
   color: rgba(82,81,81);
   font-family: "Noto Sans JP", sans-serif;
 }
+
 #quiz-wrap{
   width:80%;
   height:120px;
   border-radius: 20px;
+  font-family: serif;
   background: #e0e6ec;
   box-shadow: 7px 7px 14px #bec4c9, -7px -7px 14px #ffffff;
   margin: 40px auto;
@@ -42,14 +47,15 @@ header{
   align-items: center;
   font-size: 36px;
   color: rgba(82,81,81);
-  font-family: "Noto Sans JP", sans-serif;
 }
+
 .btn-wrap{
   width: 70%;
   display: flex;
   justify-content: space-around;
   margin:0 auto;
 }
+
 .select-btn {
   margin:0 auto;
   width: 20%;
@@ -57,13 +63,14 @@ header{
   border-radius: 10px;
   border: none;
   color: rgb(82, 81, 81);
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
   font-size:12px;
   background: #e0e6ec;
   box-shadow: 7px 7px 14px #bec4c9, -7px -7px 14px #ffffff;
   cursor: pointer;
   transition: all 0.1s; 
-  }
+}
 
 .select-btn:active{
   border: none;
@@ -73,9 +80,13 @@ header{
 .select-btn:focus{
   outline: none;
 }
-  .select-btn:active {
 
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-    border-bottom: none;
-  }
+.select-btn:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
+}
+
+#histories{
+  font-family: "Noto Sans JP", sans-serif;
+}
